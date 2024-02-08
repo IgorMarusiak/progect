@@ -7,27 +7,22 @@ ul {
 .footer {
   background: #1b414b;
   border-radius: 24px 24px 0 0;
-  width: 355px;
   max-width: 375px;
   height: 412px;
-  margin: 0;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto; /* Центруємо блок */
+  padding-top: 40px;
 }
 .footer-container {
   display: flex;
-  /* gap: 37px; */
-  flex-wrap: wrap;
-  padding-top: 40px;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
 }
 .footer-logo {
-  padding-left: 30px;
-  padding-top: 40px;
-  padding-top: 0;
-  display: flex;
+  margin-top: 0;
+  padding-right: 37px;
+
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -37,9 +32,7 @@ ul {
 .logo {
 }
 .footer-nav {
-  width: 206px;
-  height: 40px;
-  padding-left: 37px;
+  display: flex;
 }
 .nav {
 }
@@ -68,23 +61,26 @@ ul {
 .footer-soc {
   padding-top: 80px;
   padding-bottom: 40px;
-  padding-left: 134px;
 }
 .footer-soc-list {
   width: 88px;
   height: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 .footer-soc-item {
+  background: #fbfbfb;
 }
 .footer-soc-link {
 }
 .footer-soc-icon {
 }
 .footer-content {
+  text-align: center;
   display: flex;
   width: 279px;
   height: 72px;
-  padding-left: 38px;
   padding-bottom: 82px;
 }
 .footer-title {
@@ -98,6 +94,7 @@ ul {
 }
 .footer-copyright {
   display: flex;
+  gap: 20px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -105,11 +102,73 @@ ul {
   letter-spacing: 0.03em;
   text-align: center;
   color: rgba(251, 251, 251, 0.4);
-  gap: 20px;
-  padding-left: 54px;
-  padding-bottom: 200px;
+
+  padding-bottom: 20px;
 }
 .footer-link {
-  display: flex;
-  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    max-width: 768px; /* Змінено максимальну ширину */
+    height: 418px; /* Змінено висоту на автоматичну */
+    padding-top: 50px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 96px 91px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .footer-logo {
+    padding-right: 110px;
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    color: #fbfbfb;
+  }
+  .footer-nav-item {
+    width: 91px;
+  }
+  .footer-soc {
+    display: flex;
+    padding: 0;
+  }
+  .footer-soc-list {
+  }
+  .footer-content {
+    width: 640px;
+    height: 96px;
+    padding-bottom: 0;
+  }
+  .footer-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+    color: #fbfbfb;
+  }
+  .footer-copyright {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: rgba(251, 251, 251, 0.4);
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    max-width: 1280px;
+    height: 418px;
+    padding-top: 50px;
+  }
+  .footer-container {
+    gap: 96px 311px;
+  }
+  .footer-logo {
+    padding-right: 330px;
+  }
 }
